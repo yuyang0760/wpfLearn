@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UserControl\ImageButton.xaml.cs">
+    <Compile Include="UserControls\ImageButton.xaml.cs">
       <DependentUpon>ImageButton.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -70,7 +70,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControl\ImageButton.xaml">
+    <Page Include="UserControls\ImageButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -104,6 +104,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="资源\箭头2右_Enter.png" />
+    <Resource Include="资源\箭头2右_Leave.png" />
+    <Resource Include="资源\箭头2左_Enter.png" />
+    <Resource Include="资源\箭头2左_Leave.png" />
     <Resource Include="资源\K_Enter.png" />
     <Resource Include="资源\K_Leave.png" />
     <Resource Include="资源\上传_Enter.png" />

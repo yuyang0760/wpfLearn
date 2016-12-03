@@ -18,7 +18,7 @@ namespace WpfLearn
     /// <summary>
     /// Button.xaml 的交互逻辑
     /// </summary>
-    public partial class ImageButton : UserControl
+    public partial class ImageButton : System.Windows.Controls.UserControl
     {
         public event MouseButtonEventHandler ClickEvent;
 
