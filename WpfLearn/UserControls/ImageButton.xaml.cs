@@ -87,6 +87,9 @@ namespace WpfLearn
             if (this.IsEnabled == true)
             {
                 image.Source = ImageMouseLeave;
+                Thickness t = new Thickness(0, 0, 0, 0);
+                image.Margin = t;
+                label.Margin = t;
             }
         }
         private void ImageButton_MouseDown(object sender, MouseButtonEventArgs e)
