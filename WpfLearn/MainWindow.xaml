@@ -8,18 +8,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="395" Width="558" WindowStartupLocation="CenterScreen">
 
-    <Window.Resources>
+    <!--<Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Dictionary/Dictionary1.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
         </ResourceDictionary>
-    </Window.Resources>
+    </Window.Resources>-->
 
 
     <Grid x:Name="grid1" ShowGridLines="True">
         <UserControls:ImageButton3 x:Name="imageButton3" Content="ImageButton3" HorizontalAlignment="Left" Margin="29,20,0,0" VerticalAlignment="Top" Height="63" Width="148" Text="444444444" ImageCurrent="资源/灰色Leave.png" ImageMouseEnter="资源/灰色Enter.png" ImageMouseLeave="资源/灰色Leave.png" FontSize="16"/>
+        <UserControls:ImageButton3 x:Name="imageButton1" Content="ImageButton3" HorizontalAlignment="Left" Margin="89,130,0,0" VerticalAlignment="Top" ImageCurrent="资源/上传_Leave.png" ImageMouseEnter="资源/上传_Enter.png" ImageMouseLeave="资源/上传_Leave.png" Height="80" Width="74"/>
+        <UserControls:ImageButton3 x:Name="imageButton2" Content="ImageButton3" HorizontalAlignment="Left" Margin="223,119,0,0" VerticalAlignment="Top" ImageCurrent="资源/下载_Leave.png" ImageMouseEnter="资源/下载_Enter.png" ImageMouseLeave="资源/下载_Leave.png" Height="91" Width="93"/>
     </Grid>
 
 
