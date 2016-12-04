@@ -23,6 +23,8 @@ namespace WpfLearn
         public MainWindow()
         {
             InitializeComponent();
+ 
         }
+
     }
 }

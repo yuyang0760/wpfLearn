@@ -35,8 +35,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,9 +61,16 @@
     <Compile Include="UserControls\ImageButton.xaml.cs">
       <DependentUpon>ImageButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ImageButton3.xaml.cs">
+      <DependentUpon>ImageButton3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ItemControl.xaml.cs">
       <DependentUpon>ItemControl.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dictionary\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +86,10 @@
     <Page Include="UserControls\ImageButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ImageButton3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\ItemControl.xaml">
       <SubType>Designer</SubType>
@@ -125,7 +139,6 @@
     <Resource Include="资源\保存_Leave.png" />
     <Resource Include="资源\刷新_Enter.png" />
     <Resource Include="资源\刷新_Leave.png" />
-    <Content Include="资源\图片拆分器.exe" />
     <Resource Include="资源\垃圾桶_Enter.png" />
     <Resource Include="资源\垃圾桶_Leave.png" />
     <Resource Include="资源\小红旗_Enter.png" />

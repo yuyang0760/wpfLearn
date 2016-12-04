@@ -1,30 +1,26 @@
-﻿<Window x:Class="WpfLearn.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLearn"
+        xmlns:UserControls="clr-namespace:WpfLearn.UserControls" xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="WpfLearn.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="485" Width="644" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="395" Width="558" WindowStartupLocation="CenterScreen">
 
-    <!--<Window.Resources>
+    <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Dictionary/ButtonDictionary.xaml"/>
+                <ResourceDictionary Source="Dictionary/Dictionary1.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
         </ResourceDictionary>
-    </Window.Resources>-->
+    </Window.Resources>
 
 
     <Grid x:Name="grid1" ShowGridLines="True">
-        <local:ImageButton HorizontalAlignment="Left" Height="55" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontFamily="Microsoft YaHei" Text="123123" ImageMouseEnter="资源/灰色Enter.png" ImageMouseLeave="资源/灰色Leave.png"/>
-        <local:ImageButton HorizontalAlignment="Left" Margin="22,87,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/K_Enter.png" ImageMouseLeave="资源/K_Leave.png" Height="120" Width="118"/>
-        <local:ImageButton HorizontalAlignment="Left" Margin="31,212,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/上传_Enter.png" ImageMouseLeave="资源/上传_Leave.png" Height="85" Width="88"/>
-        <local:ImageButton HorizontalAlignment="Left" Margin="145,32,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/下载_Enter.png" ImageMouseLeave="资源/下载_Leave.png" RenderTransformOrigin="0.281,-0.178" Height="166" Width="149"/>
-        <local:ImageButton HorizontalAlignment="Left" Margin="119,177,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/保存_Enter.png" ImageMouseLeave="资源/保存_Leave.png" Height="209" Width="269"/>
-        <local:ImageButton HorizontalAlignment="Left" Margin="393,10,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/垃圾桶_Enter.png" Height="172" Width="161" ImageMouseLeave="资源/垃圾桶_Leave.png"/>
-        <local:ImageButton HorizontalAlignment="Left" Margin="316,32,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/箭头1Enter.png" ImageMouseLeave="资源/箭头1Leave.png" Height="49" Width="53"/>
-        <local:ImageButton HorizontalAlignment="Left" Margin="56,349,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/返回_Enter.png" ImageMouseLeave="资源/返回_Leave.png"/>
-        <local:ImageButton HorizontalAlignment="Left" Margin="401,261,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/刷新_Enter.png" ImageMouseLeave="资源/刷新_Leave.png" Height="148" Width="153"/>
+        <UserControls:ImageButton3 x:Name="imageButton3" Content="ImageButton3" HorizontalAlignment="Left" Margin="29,20,0,0" VerticalAlignment="Top" Height="63" Width="148" Text="444444444" ImageCurrent="资源/灰色Leave.png" ImageMouseEnter="资源/灰色Enter.png" ImageMouseLeave="资源/灰色Leave.png" FontSize="16"/>
     </Grid>
+
+
 </Window>

@@ -11,6 +11,8 @@
              MouseDown="ImageButton_MouseDown" 
              MouseUp="ImageButton_MouseUp"
              >
+    
+    
     <Grid Background="#00000000">
         <Image x:Name="image" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label x:Name="label" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
