@@ -15,7 +15,8 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/ImageButton4_Theme.xaml"/>
+                <!--<ResourceDictionary Source="Themes/ImageButton4_Theme.xaml"/>-->
+                <ResourceDictionary Source="Themes/Controls_Themes.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -23,7 +24,12 @@
 
     <Grid x:Name="grid1" ShowGridLines="True">
         <UserControls:ImageButton4 x:Name="imageButton4" Content="ImageButton4" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="126" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="资源/K_Enter.png" ImageMouseLeave="资源/K_Leave.png"/>
-        <UserControls:ImageButton4 x:Name="imageButton1" Content="ImageButton4" HorizontalAlignment="Left" Margin="0,67,0,0" VerticalAlignment="Top" Height="69" Width="147" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="资源/灰色Enter.png" ImageMouseLeave="资源/灰色Leave.png" Text="1111111"/>
+        <UserControls:ImageButton4 x:Name="imageButton1" Content="ImageButton4" HorizontalAlignment="Left" Margin="141,10,0,0" VerticalAlignment="Top" Height="69" Width="147" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="资源/灰色Enter.png" ImageMouseLeave="资源/灰色Leave.png" Text="1111111" Background="{x:Null}"/>
+        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem1" HorizontalAlignment="Left" Height="55" Margin="22,104,0,0" VerticalAlignment="Top" Width="181" Style="{DynamicResource ComboBoxNoItem1Style}" Text="6666666"/>
+        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem2" HorizontalAlignment="Left" Height="100" Margin="22,199,0,0" VerticalAlignment="Top" Width="311" Style="{DynamicResource ComboBoxNoItem1Style}" Text="555555"  BorderThickness="1"/>
+
+
+
     </Grid>
 
 

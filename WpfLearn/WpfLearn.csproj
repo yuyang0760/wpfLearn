@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\ComboBoxNoItem1.cs" />
     <Compile Include="UserControls\ImageButton4.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -71,9 +72,9 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Themes\ImageButton4_Theme.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Themes\Controls_Themes.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -103,7 +104,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="资源\ComboBox背景.png" />
+    <Resource Include="资源\ComboBox背景灰.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="资源\箭头2右_Enter.png" />
     <Resource Include="资源\箭头2右_Leave.png" />
