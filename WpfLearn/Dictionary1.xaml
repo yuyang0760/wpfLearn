@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfLearn" xmlns:UserControls="clr-namespace:WpfLearn.UserControls">
+
+    <!--ImageButton4的样式-->
+    <Style x:Key="ImageButton4Style1" TargetType="{x:Type UserControls:ImageButton4}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <!--ImageButton4控件模板-->
+                <ControlTemplate  TargetType="{x:Type UserControls:ImageButton4}">
+                    <!--image/text-->
+                    <!--背景色，透明-->
+                    <!--背景色，透明-->
+                    <!--背景色，透明-->
+                    <Grid Background="Transparent">
+                        <Image x:Name="image" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding ImageMouseLeave, RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                        <Label x:Name="label" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding Text, RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                    </Grid>
+
+                    <!--触发器-->
+                    <ControlTemplate.Triggers>
+                        <!--按钮失效-->
+                        <!--<Trigger Property="IsEnabled" Value="false">
+                <Setter TargetName="image" Property="Source" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=ImageCurrent}" />
+            </Trigger>-->
+                        <!--鼠标滑过-->
+                        <Trigger Property="IsMouseOver" Value="true" SourceName="image">
+                            <Setter TargetName="image" Property="Source" Value="{Binding ImageMouseEnter, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                        </Trigger>
+                        <!--鼠标按下-->
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="image" Property="Margin" Value="0,3,0,0" />
+                            <Setter TargetName="label" Property="Margin" Value="0,3,0,0" />
+                        </Trigger>
+                        <Trigger Property="Padding">
+                            <Trigger.Value>
+                                <Thickness>0</Thickness>
+                            </Trigger.Value>
+                            <Setter Property="Margin" TargetName="image" Value="10,0,0,0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -15,7 +15,7 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/ImageButton4Theme.xaml"/>
+                <ResourceDictionary Source="Themes/ImageButton4_Theme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
