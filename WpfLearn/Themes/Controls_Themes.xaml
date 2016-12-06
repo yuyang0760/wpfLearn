@@ -8,8 +8,8 @@
     <ImageBrush x:Key="ComboBoxNoItemBackground_hui" ImageSource="pack://application:,,,/资源/ComboBox背景灰.png" />
 
 
-    <!--ImageButton4的样式-->
-    <Style x:Key="ImageButton4Style" TargetType="local:ImageButton4">
+    <!--ImageButton4的样式 x:Key="ImageButton4Style"-->
+    <Style  TargetType="local:ImageButton4">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
@@ -47,8 +47,8 @@
     </Style>
 
 
-    <!--ComboBoxNoItem1Style样式-->
-    <Style x:Key="ComboBoxNoItem1Style" TargetType="{x:Type local:ComboBoxNoItem1}">
+    <!--ComboBoxNoItem1Style样式  x:Key="ComboBoxNoItem1Style" -->
+    <Style TargetType="{x:Type local:ComboBoxNoItem1}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:ComboBoxNoItem1}">

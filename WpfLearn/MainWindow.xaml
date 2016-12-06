@@ -19,17 +19,9 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-
-
-    <Grid x:Name="grid1" ShowGridLines="True">
-        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem1" HorizontalAlignment="Left" Margin="71,71,0,0" VerticalAlignment="Top" Height="38" Width="144" Style="{DynamicResource ComboBoxNoItem1Style}">
-            <ListBoxItem Content="11111"/>
-            <ListBoxItem Content="22222"/>
-            <ListBoxItem Content="33333"/>
-            <ListBoxItem Content="44444"/>
-        </UserControls:ComboBoxNoItem1>
-        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem2" HorizontalAlignment="Left" Margin="89,150,0,0" VerticalAlignment="Top" Height="36" Width="126" Style="{DynamicResource ComboBoxNoItem1Style}"/>
-        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem3" HorizontalAlignment="Left" Margin="41,227,0,0" VerticalAlignment="Top" Style="{DynamicResource ComboBoxNoItem1Style}" Height="39" Width="174"/>
+    <Grid>
+        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem1" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Height="44" Width="200"/>
+        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem2" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Height="36" Width="358"/>
     </Grid>
 
 
