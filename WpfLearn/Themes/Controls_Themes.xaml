@@ -55,7 +55,7 @@
                     <!--最外层Grid,设置背景-->
                     <Grid Margin="0" x:Name="grid1" Background="{DynamicResource ComboBoxNoItemBackground}">
                         <!--里面的一个Border，当鼠标移上去时，显示的框-->
-                        <Border x:Name="border"  BorderBrush="{x:Null}" BorderThickness="2" Height="Auto" Margin="10" VerticalAlignment="Stretch" Width="Auto" >
+                        <Border x:Name="border"  BorderBrush="{x:Null}" BorderThickness="2" Height="Auto" Margin="2" VerticalAlignment="Stretch" Width="Auto" >
                             <!--Grid 分成 3部分 两个图片按钮，一个TextBlock ,背景和grid1的背景一样 -->
                             <Grid Margin="0,0,0,0" Background="{Binding ElementName=grid1,Path=Background}">
                                 <Grid.ColumnDefinitions>
@@ -68,14 +68,14 @@
 
                                 <TextBlock x:Name="textBlock" Grid.Column="1" TextWrapping="Wrap" Text="{TemplateBinding Text }" TextAlignment="Center" VerticalAlignment="Center"/>
 
-                                <local:ImageButton4 x:Name="imageButton1"  
+                                <local:ImageButton4 x:Name="imageButtonLeft"  
                                                    local:ComboBoxNoItem1.IsLeftEnabled="True"
                                                    Command="local:ComboBoxNoItem1.LeftClickCommand" 
                                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                                     Grid.Column="0" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/资源/箭头2左_Enter.png" ImageMouseLeave="pack://application:,,,/资源/箭头2左_Leave.png"/>
-                                <local:ImageButton4 x:Name="imageButton2" 
-                                                   local:ComboBoxNoItem1.IsRightEnabled="True"
-                                                   Command="local:ComboBoxNoItem1.RightClickCommand" 
+                                <local:ImageButton4 x:Name="imageButtonRight" 
+                                                   local:ComboBoxNoItem1.IsLeftEnabled="True"
+                                                   Command="local:ComboBoxNoItem1.LeftClickCommand" 
                                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                                    Grid.Column="2" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/资源/箭头2右_Enter.png" ImageMouseLeave="pack://application:,,,/资源/箭头2右_Leave.png"/>
 
