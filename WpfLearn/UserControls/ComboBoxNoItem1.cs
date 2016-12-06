@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,47 +17,158 @@ using System.Windows.Shapes;
 namespace WpfLearn.UserControls
 {
     /// <summary>
-    /// 按照步骤 1a 或 1b 操作，然后执行步骤 2 以在 XAML 文件中使用此自定义控件。
-    ///
-    /// 步骤 1a) 在当前项目中存在的 XAML 文件中使用该自定义控件。
-    /// 将此 XmlNamespace 特性添加到要使用该特性的标记文件的根 
-    /// 元素中: 
-    ///
-    ///     xmlns:MyNamespace="clr-namespace:WpfLearn.UserControls"
-    ///
-    ///
-    /// 步骤 1b) 在其他项目中存在的 XAML 文件中使用该自定义控件。
-    /// 将此 XmlNamespace 特性添加到要使用该特性的标记文件的根 
-    /// 元素中: 
-    ///
-    ///     xmlns:MyNamespace="clr-namespace:WpfLearn.UserControls;assembly=WpfLearn.UserControls"
-    ///
-    /// 您还需要添加一个从 XAML 文件所在的项目到此项目的项目引用，
-    /// 并重新生成以避免编译错误: 
-    ///
-    ///     在解决方案资源管理器中右击目标项目，然后依次单击
-    ///     “添加引用”->“项目”->[浏览查找并选择此项目]
-    ///
-    ///
-    /// 步骤 2)
-    /// 继续操作并在 XAML 文件中使用控件。
-    ///
-    ///     <MyNamespace:ComboBoxNoItem1/>
-    ///
+    /// 2016.12.6 希望不要出现bug，出现也搞不定了。。
     /// </summary>
-    /// 
-
     public class ComboBoxNoItem1 : ComboBox
     {
-
-      
-
-
+        #region 静态 构造函数
         static ComboBoxNoItem1()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(ComboBoxNoItem1), new FrameworkPropertyMetadata(typeof(ComboBoxNoItem1)));
+
+            //LeftClickCommand
+            LeftClickCommand = new RoutedUICommand();
+            LeftClickCommandBinding = new CommandBinding(LeftClickCommand);
+            LeftClickCommandBinding.Executed += LeftClick;
+
+            //RightClickCommand
+            RightClickCommand = new RoutedUICommand();
+            RightClickCommandBinding = new CommandBinding(RightClickCommand);
+            RightClickCommandBinding.Executed += RightClick;
+        }
+        #endregion
+
+        #region 左边按钮
+        /// <summary>
+        /// 左边按钮，附加属性，不太懂。。
+        /// </summary>
+        public static readonly DependencyProperty IsLeftEnabledProperty = DependencyProperty.RegisterAttached("IsLeftEnabled"
+            , typeof(bool), typeof(ComboBoxNoItem1), new FrameworkPropertyMetadata(false, IsLeftEnabledChanged));
+
+        private static void IsLeftEnabledChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            Debug.WriteLine("IsLeftEnabledChanged");
+            var button = d as ImageButton4;
+            if (e.OldValue != e.NewValue && button != null)
+            {
+                //绑定
+                button.CommandBindings.Add(LeftClickCommandBinding);
+            }
+        }
+       
+        
+        // get.set 但是从来就没用过
+        [AttachedPropertyBrowsableForType(typeof(ComboBoxNoItem1))]
+        public static bool GetIsLeftEnabled(DependencyObject d)
+        {
+            return (bool)d.GetValue(IsLeftEnabledProperty);
         }
 
+        public static void SetIsLeftEnabled(DependencyObject obj, bool value)
+        {
+            obj.SetValue(IsLeftEnabledProperty, value);
+        }
+
+        // 左边点击命令
+        public static RoutedUICommand LeftClickCommand { get; private set; }
+        /// <summary>
+        /// 绑定事件
+        /// </summary>
+        private static readonly CommandBinding LeftClickCommandBinding;
+
+        private static void LeftClick(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Debug.WriteLine("左边按钮按下了");
+            
+            // 空，返回
+            if (e.Parameter == null) return;
+
+            ComboBoxNoItem1 comboBoxNoItem1 = (ComboBoxNoItem1)e.Parameter;
+            if (comboBoxNoItem1.Items.Count<=0)
+            {
+                return;
+            }
+
+            // 循环显示
+            if (comboBoxNoItem1.SelectedIndex==-1 || comboBoxNoItem1.SelectedIndex == 0)
+            {
+                comboBoxNoItem1.SelectedIndex = comboBoxNoItem1.Items.Count - 1;
+                //SetIsLeftEnabled( comboBoxNoItem1, false);
+            }
+            else
+            {
+                comboBoxNoItem1.SelectedIndex -= 1;
+            }
+            
+        }
+
+        #endregion
        
+        #region 右边按钮
+        /// <summary>
+        /// 右边按钮，附加属性，不太懂。。
+        /// </summary>
+        public static readonly DependencyProperty IsRightEnabledProperty = DependencyProperty.RegisterAttached("IsRightEnabled"
+            , typeof(bool), typeof(ComboBoxNoItem1), new FrameworkPropertyMetadata(false, IsRightEnabledChanged));
+
+        private static void IsRightEnabledChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            Debug.WriteLine("IsRightEnabledChanged");
+            var button = d as ImageButton4;
+            if (e.OldValue != e.NewValue && button != null)
+            {
+                //绑定
+                button.CommandBindings.Add(RightClickCommandBinding);
+            }
+        }
+
+
+        // get.set 但是从来就没用过
+        [AttachedPropertyBrowsableForType(typeof(ComboBoxNoItem1))]
+        public static bool GetIsRightEnabled(DependencyObject d)
+        {
+            return (bool)d.GetValue(IsRightEnabledProperty);
+        }
+
+        public static void SetIsRightEnabled(DependencyObject obj, bool value)
+        {
+            obj.SetValue(IsRightEnabledProperty, value);
+        }
+
+        // 右边点击命令
+        public static RoutedUICommand RightClickCommand { get; private set; }
+        /// <summary>
+        /// 绑定事件
+        /// </summary>
+        private static readonly CommandBinding RightClickCommandBinding;
+
+    
+
+        private static void RightClick(object sender, ExecutedRoutedEventArgs e)
+        {
+            // Debug.WriteLine("右边按钮按下了");
+
+            // 空，返回
+            if (e.Parameter == null) return;
+
+            ComboBoxNoItem1 comboBoxNoItem1 = (ComboBoxNoItem1)e.Parameter;
+            if (comboBoxNoItem1.Items.Count <= 0)
+            {
+                return;
+            }
+
+            // 循环显示
+            if (comboBoxNoItem1.SelectedIndex == -1 || comboBoxNoItem1.SelectedIndex == comboBoxNoItem1.Items.Count - 1)
+            {
+                comboBoxNoItem1.SelectedIndex = 0;
+                //SetIsRightEnabled( comboBoxNoItem1, false);
+            }
+            else
+            {
+                comboBoxNoItem1.SelectedIndex += 1;
+            }
+
+        }
+
+        #endregion
     }
 }

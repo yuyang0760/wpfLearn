@@ -7,6 +7,7 @@
     <ImageBrush x:Key="ComboBoxNoItemBackground" ImageSource="pack://application:,,,/资源/ComboBox背景.png" />
     <ImageBrush x:Key="ComboBoxNoItemBackground_hui" ImageSource="pack://application:,,,/资源/ComboBox背景灰.png" />
 
+
     <!--ImageButton4的样式-->
     <Style x:Key="ImageButton4Style" TargetType="local:ImageButton4">
         <Style.Setters>
@@ -45,6 +46,7 @@
         </Style.Setters>
     </Style>
 
+
     <!--ComboBoxNoItem1Style样式-->
     <Style x:Key="ComboBoxNoItem1Style" TargetType="{x:Type local:ComboBoxNoItem1}">
         <Setter Property="Template">
@@ -62,16 +64,25 @@
                                     <ColumnDefinition Width="6*"/>
                                     <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
-                                <!--标记： 元素3个-->
+                                <!--标记： 元素3个  -->
 
-                                <local:ImageButton4 x:Name="imageButton4"  Grid.Column="0"    HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/资源/箭头2左_Enter.png" ImageMouseLeave="pack://application:,,,/资源/箭头2左_Leave.png"/>
-                                <local:ImageButton4 x:Name="imageButton1"    Grid.Column="2" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/资源/箭头2右_Enter.png" ImageMouseLeave="pack://application:,,,/资源/箭头2右_Leave.png"/>
-                                
                                 <TextBlock x:Name="textBlock" Grid.Column="1" TextWrapping="Wrap" Text="{TemplateBinding Text }" TextAlignment="Center" VerticalAlignment="Center"/>
+
+                                <local:ImageButton4 x:Name="imageButton1"  
+                                                   local:ComboBoxNoItem1.IsLeftEnabled="True"
+                                                   Command="local:ComboBoxNoItem1.LeftClickCommand" 
+                                                   CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                    Grid.Column="0" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/资源/箭头2左_Enter.png" ImageMouseLeave="pack://application:,,,/资源/箭头2左_Leave.png"/>
+                                <local:ImageButton4 x:Name="imageButton2" 
+                                                   local:ComboBoxNoItem1.IsRightEnabled="True"
+                                                   Command="local:ComboBoxNoItem1.RightClickCommand" 
+                                                   CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                   Grid.Column="2" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Style="{DynamicResource ImageButton4Style}" ImageMouseEnter="pack://application:,,,/资源/箭头2右_Enter.png" ImageMouseLeave="pack://application:,,,/资源/箭头2右_Leave.png"/>
+
                             </Grid>
                         </Border>
                     </Grid>
-                    
+
 
                     <!--触发器-->
                     <ControlTemplate.Triggers>
@@ -86,4 +97,5 @@
             </Setter.Value>
         </Setter>
     </Style>
+
 </ResourceDictionary>

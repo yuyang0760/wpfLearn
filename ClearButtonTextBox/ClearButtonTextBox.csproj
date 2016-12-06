@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FFDFC811-D289-4169-AD2D-37106A6283F7}</ProjectGuid>
+    <ProjectGuid>{1A33FE98-50C4-4E70-979B-255F0801AE6A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WpfLearn</RootNamespace>
-    <AssemblyName>WpfLearn</AssemblyName>
+    <RootNamespace>ClearButtonTextBox</RootNamespace>
+    <AssemblyName>ClearButtonTextBox</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -38,8 +38,6 @@
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,8 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UserControls\ComboBoxNoItem1.cs" />
-    <Compile Include="UserControls\ImageButton4.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,11 +64,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ControlAttachProperty.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Themes\Controls_Themes.xaml">
+    <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -103,61 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="资源\ComboBox背景.png" />
-    <Resource Include="资源\ComboBox背景灰.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="资源\箭头2右_Enter.png" />
-    <Resource Include="资源\箭头2右_Leave.png" />
-    <Resource Include="资源\箭头2左_Enter.png" />
-    <Resource Include="资源\箭头2左_Leave.png" />
-    <Resource Include="资源\K_Enter.png" />
-    <Resource Include="资源\K_Leave.png" />
-    <Resource Include="资源\上传_Enter.png" />
-    <Resource Include="资源\上传_Leave.png" />
-    <Resource Include="资源\下载_Enter.png" />
-    <Resource Include="资源\下载_Leave.png" />
-    <Resource Include="资源\保存_Enter.png" />
-    <Resource Include="资源\保存_Leave.png" />
-    <Resource Include="资源\刷新_Enter.png" />
-    <Resource Include="资源\刷新_Leave.png" />
-    <Resource Include="资源\垃圾桶_Enter.png" />
-    <Resource Include="资源\垃圾桶_Leave.png" />
-    <Resource Include="资源\小红旗_Enter.png" />
-    <Resource Include="资源\小红旗_Leave.png" />
-    <Resource Include="资源\我想想_Enter.png" />
-    <Resource Include="资源\我想想_Leave.png" />
-    <Resource Include="资源\打扫_Enter.png" />
-    <Resource Include="资源\打扫_Leave.png" />
-    <Resource Include="资源\文件夹_Enter.png" />
-    <Resource Include="资源\文件夹_Leave.png" />
-    <Resource Include="资源\更新_Enter.png" />
-    <Resource Include="资源\更新_Leave.png" />
-    <Resource Include="资源\灰色Enter.png" />
-    <Resource Include="资源\灰色Leave.png" />
-    <Resource Include="资源\电影_Enter.png" />
-    <Resource Include="资源\电影_Leave.png" />
-    <Resource Include="资源\箭头1Enter.png" />
-    <Resource Include="资源\箭头1Leave.png" />
-    <Resource Include="资源\设置1_Enter.png" />
-    <Resource Include="资源\设置1_Leave.png" />
-    <Resource Include="资源\设置2_Enter.png" />
-    <Resource Include="资源\设置2_Leave.png" />
-    <Resource Include="资源\返回2_Enter.png" />
-    <Resource Include="资源\返回2_Leave.png" />
-    <Resource Include="资源\返回_Enter.png" />
-    <Resource Include="资源\返回_Leave.png" />
-    <Resource Include="资源\这是什么_Enter.png" />
-    <Resource Include="资源\这是什么_Leave.png" />
-    <Resource Include="资源\问号_Enter.png" />
-    <Resource Include="资源\问号_Leave.png" />
-    <Resource Include="资源\随机_Enter.png" />
-    <Resource Include="资源\随机_Leave.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Styles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
