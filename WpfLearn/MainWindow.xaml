@@ -22,13 +22,7 @@
 
 
     <Grid x:Name="grid1" ShowGridLines="True">
-        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem1" HorizontalAlignment="Left" Margin="81,87,0,0" VerticalAlignment="Top" Height="40" Width="120" Style="{DynamicResource ComboBoxNoItem1Style}">
-            <ListBoxItem Content="11111"/>
-            <ListBoxItem Content="22222"/>
-            <ListBoxItem Content="33333"/>
-        </UserControls:ComboBoxNoItem1>
-
-
+        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem1" HorizontalAlignment="Left" Margin="51,60,0,0" VerticalAlignment="Top" Height="73" Width="146" Style="{DynamicResource ComboBoxNoItem1Style}"/>
     </Grid>
 
 

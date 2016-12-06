@@ -64,7 +64,7 @@
                                     <ColumnDefinition Width="6*"/>
                                     <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
-                                <!--标记： 元素3个  -->
+                                <!--标记： 元素3个     -->
 
                                 <TextBlock x:Name="textBlock" Grid.Column="1" TextWrapping="Wrap" Text="{TemplateBinding Text }" TextAlignment="Center" VerticalAlignment="Center"/>
 

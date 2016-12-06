@@ -25,6 +25,8 @@ namespace WpfLearn.UserControls
         static ComboBoxNoItem1()
         {
 
+
+
             //LeftClickCommand
             LeftClickCommand = new RoutedUICommand();
             LeftClickCommandBinding = new CommandBinding(LeftClickCommand);
@@ -102,7 +104,7 @@ namespace WpfLearn.UserControls
         }
 
         #endregion
-       
+
         #region 右边按钮
         /// <summary>
         /// 右边按钮，附加属性，不太懂。。
@@ -141,8 +143,6 @@ namespace WpfLearn.UserControls
         /// </summary>
         private static readonly CommandBinding RightClickCommandBinding;
 
-    
-
         private static void RightClick(object sender, ExecutedRoutedEventArgs e)
         {
             // Debug.WriteLine("右边按钮按下了");
@@ -157,18 +157,20 @@ namespace WpfLearn.UserControls
             }
 
             // 循环显示
-            if (comboBoxNoItem1.SelectedIndex == -1 || comboBoxNoItem1.SelectedIndex == comboBoxNoItem1.Items.Count - 1)
+            if (comboBoxNoItem1.SelectedIndex == -1 || comboBoxNoItem1.SelectedIndex == 0)
             {
-                comboBoxNoItem1.SelectedIndex = 0;
+                comboBoxNoItem1.SelectedIndex = comboBoxNoItem1.Items.Count - 1;
                 //SetIsRightEnabled( comboBoxNoItem1, false);
             }
             else
             {
-                comboBoxNoItem1.SelectedIndex += 1;
+                comboBoxNoItem1.SelectedIndex -= 1;
             }
 
         }
 
         #endregion
+
+
     }
 }
