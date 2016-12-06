@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLearn", "WpfLearn\WpfLearn.csproj", "{FFDFC811-D289-4169-AD2D-37106A6283F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearButtonTextBox", "ClearButtonTextBox\ClearButtonTextBox.csproj", "{1A33FE98-50C4-4E70-979B-255F0801AE6A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{FFDFC811-D289-4169-AD2D-37106A6283F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFDFC811-D289-4169-AD2D-37106A6283F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFDFC811-D289-4169-AD2D-37106A6283F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A33FE98-50C4-4E70-979B-255F0801AE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A33FE98-50C4-4E70-979B-255F0801AE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A33FE98-50C4-4E70-979B-255F0801AE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A33FE98-50C4-4E70-979B-255F0801AE6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

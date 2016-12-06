@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace WpfLearn.UserControls
 {
-  
+
     /// <summary>
     /// 【2016.12.5】，这个版本应该是最接近wpf真正的控件。
     /// 
@@ -23,7 +23,7 @@ namespace WpfLearn.UserControls
     /// 
     /// 1.鼠标进入图片 2鼠标离开图片 3.按钮上的文本
     /// 
-    /// 配合样式文件ImageButton4Theme.xaml实现
+    /// 配合Controls_Themes.xaml样式文件使用
     /// 
     /// 不足的是样式文件中，对图片和文本更多细节的设置没有弄，只是简单地居中
     /// </summary>

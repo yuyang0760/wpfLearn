@@ -17,7 +17,12 @@ using System.Windows.Shapes;
 namespace WpfLearn.UserControls
 {
     /// <summary>
-    /// 2016.12.6 希望不要出现bug，出现也搞不定了。。
+    /// 
+    /// 【2016.12.6】 希望不要出现bug，出现也搞不定了。。
+    /// 配合Controls_Themes.xaml样式文件使用
+    /// 不知道为什么，想把LeftClickCommand改成ButtonClickCommand，可是就是不行。
+    /// 其实吧，左右两个按钮，都是调用了LeftClickCommand。
+    /// 唯一的判断就是在LeftClick函数，有判断按钮的name，来做不同的事情。
     /// </summary>
     public class ComboBoxNoItem1 : ComboBox
     {
@@ -25,14 +30,11 @@ namespace WpfLearn.UserControls
         static ComboBoxNoItem1()
         {
 
-
-
             //LeftClickCommand
             LeftClickCommand = new RoutedUICommand();
             LeftClickCommandBinding = new CommandBinding(LeftClickCommand);
             LeftClickCommandBinding.Executed += LeftClick;
-
-     
+   
         }
         #endregion
 
@@ -49,10 +51,15 @@ namespace WpfLearn.UserControls
             var button = d as ImageButton4;
             if (e.OldValue != e.NewValue && button != null)
             {
-                Debug.WriteLine("222222");
+               
                 //绑定
-                button.CommandBindings.Add(LeftClickCommandBinding);
+                if (!button.CommandBindings.Contains(LeftClickCommandBinding))
+                {
+                  //  Debug.WriteLine("444444");
+                    button.CommandBindings.Add(LeftClickCommandBinding);
+                }
             }
+           
         }
        
         
@@ -91,6 +98,7 @@ namespace WpfLearn.UserControls
             // 点击左边按钮
             if (((ImageButton4)sender).Name=="imageButtonLeft")
             {
+                Debug.WriteLine(comboBoxNoItem1.SelectedIndex);
                 // 循环显示
                 if (comboBoxNoItem1.SelectedIndex == -1 || comboBoxNoItem1.SelectedIndex == 0)
                 {

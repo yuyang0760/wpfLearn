@@ -90,6 +90,12 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="BorderBrush" TargetName="border" Value="#977D4D"/>
                         </Trigger>
+                        <!--<Trigger Property="SelectedIndex" Value="0">
+                            <Setter   TargetName="imageButtonLeft" Property="local:ComboBoxNoItem1.IsLeftEnabled" Value="False" ></Setter>
+                        </Trigger>-->
+                        <!--<Trigger Property="SelectedIndex" Value="0">
+                            <Setter   TargetName="imageButtonLeft" Property="local:ComboBoxNoItem1.IsLeftEnabled" Value="False" ></Setter>
+                        </Trigger>-->
 
                     </ControlTemplate.Triggers>
 
