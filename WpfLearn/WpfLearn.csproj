@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Student.cs" />
     <Compile Include="UserControls\ComboBoxNoItem1.cs" />
     <Compile Include="UserControls\ImageButton4.cs" />
     <Page Include="MainWindow.xaml">
@@ -75,6 +76,14 @@
     <Page Include="Themes\Controls_Themes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ListBoxWorld1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\TextBox1_Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -157,7 +166,30 @@
     <Resource Include="资源\随机_Leave.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Styles\" />
+    <Folder Include="资源\世界资源\其他\" />
+    <Folder Include="资源\世界资源\动物\" />
+    <Folder Include="资源\世界资源\资源\" />
+    <Folder Include="资源\世界资源\食物\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="资源\世界资源\怪物\8_001_003.png" />
+    <Resource Include="资源\世界资源\怪物\8_001_004.png" />
+    <Resource Include="资源\世界资源\怪物\8_001_007.png" />
+    <Resource Include="资源\世界资源\怪物\8_002_001.png" />
+    <Resource Include="资源\世界资源\怪物\8_002_007.png" />
+    <Resource Include="资源\世界资源\怪物\8_003_002.png" />
+    <Resource Include="资源\世界资源\怪物\8_005_001.png" />
+    <Resource Include="资源\世界资源\怪物\8_005_006.png" />
+    <Resource Include="资源\世界资源\怪物\8_006_001.png" />
+    <Resource Include="资源\世界资源\怪物\8_007_004.png" />
+    <Resource Include="资源\世界资源\怪物\8_007_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="资源\textBox灰.png" />
+    <Resource Include="资源\textBox黑.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="资源\textBoxEnter背景.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

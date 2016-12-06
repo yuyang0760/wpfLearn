@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfLearn
+namespace readHanhua
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
@@ -23,22 +23,6 @@ namespace WpfLearn
         public MainWindow()
         {
             InitializeComponent();
-
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            List<Student> l = new List<Student>();
-            l.Add(new Student("3333333"));
-            l.Add(new Student("3333333"));
-            l.Add(new Student("3333333"));
-            l.Add(new Student("3333333"));
-            l.Add(new Student("3333333"));
-            l.Add(new Student("3333333"));
-            l.Add(new Student("3333333"));
-
-            //listBox.ItemsSource = l;
-            
         }
     }
 }
