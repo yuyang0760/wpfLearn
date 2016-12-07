@@ -191,6 +191,20 @@
   <ItemGroup>
     <Resource Include="资源\textBoxEnter背景.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="资源\世界资源\怪物\8_009_003.png" />
+    <Resource Include="资源\世界资源\怪物\8_010_001.png" />
+    <Resource Include="资源\世界资源\怪物\8_010_004.png" />
+    <Resource Include="资源\世界资源\怪物\8_011_003.png" />
+    <Resource Include="资源\世界资源\怪物\8_012_006.png" />
+    <Resource Include="资源\世界资源\怪物\8_013_002.png" />
+    <Resource Include="资源\世界资源\怪物\8_013_006.png" />
+    <Resource Include="资源\世界资源\怪物\8_014_003.png" />
+    <Resource Include="资源\世界资源\怪物\8_014_004.png" />
+    <Resource Include="资源\世界资源\怪物\8_014_005.png" />
+    <Resource Include="资源\世界资源\怪物\8_015_002.png" />
+    <Resource Include="资源\世界资源\怪物\8_016_002.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

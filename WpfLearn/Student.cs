@@ -7,16 +7,28 @@ using System.Windows.Media;
 
 namespace WpfLearn
 {
+
+    /// <summary>
+    /// 测试类
+    /// </summary>
     class Student
     {
 
-        public Student(string name) {
-
+        public Student(string name,string path,List<string> hairsList, int n)
+        {
+           
             this.name = name;
-
+            this.Path = path;
+            this.hairsList = hairsList;
+            this.n = n;
         }
 
-       private  string name;
+       
+
+        private string name;
+        private string path;
+        private List<string> hairsList;
+        private int n;
 
         public string Name
         {
@@ -31,35 +43,45 @@ namespace WpfLearn
             }
         }
 
-        //private ImageSource imageSource;
-        //private List<string> listName;
+        public string Path
+        {
+            get
+            {
+                return path;
+            }
 
-        //public ImageSource ImageSource
-        //{
-        //    get
-        //    {
-        //        return imageSource;
-        //    }
+            set
+            {
+                path = value;
+            }
+        }
 
-        //    set
-        //    {
-        //        imageSource = value;
-        //    }
-        //}
+        public List<string> HairsList
+        {
+            get
+            {
+                return hairsList;
+            }
 
-        //public List<string> ListName
-        //{
-        //    get
-        //    {
-        //        return listName;
-        //    }
+            set
+            {
+                hairsList = value;
+            }
+        }
 
-        //    set
-        //    {
-        //        listName = value;
-        //    }
-        //}
+        public int N
+        {
+            get
+            {
+                return n;
+            }
+
+            set
+            {
+                n = value;
+            }
+        }
     }
 
-   
+
 }

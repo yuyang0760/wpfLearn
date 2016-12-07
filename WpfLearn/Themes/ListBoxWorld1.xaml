@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:WpfLearn.UserControls">
 
-    <!-- listBox样式  world1-->
+    <!-- 2016.12.6-7 listBox样式  配置世界文件用-->
     <Style  x:Key="ListBoxWorld1" TargetType="{x:Type ListBox}">
  
 
@@ -10,12 +10,24 @@
         <Setter Property="ItemTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <StackPanel>
-                        <!--<Image Source="{Binding ImageSource}"/>-->
-                        <!--<local:ComboBoxNoItem1  />-->
-                        <TextBlock Text="{Binding Name}" />
-                 
-                    </StackPanel>
+
+                    <!--设置grid的高度，ColumnDefinition 宽度 控制图片的大小-->
+                    <Grid   x:Name="grid1"  Margin="0"   Height="50" >
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Name="cd1" Width="50" />
+                            <ColumnDefinition x:Name="cd2" Width="150"/>
+                        </Grid.ColumnDefinitions>
+                    
+
+                    <!--<StackPanel  Orientation="Horizontal">-->  
+                        <!--图片-->
+                        <Image x:Name="image" Margin="0,1,0,0"  Grid.Column="0" Source="{Binding Path}"/>
+                        <!--combobox   SelectedValue="33"/>-->
+                        <local:ComboBoxNoItem1 x:Name="ComboBoxNoItem1" Margin="0,1,5,0" Grid.Column="1" 
+                                               ItemsSource="{Binding HairsList}" SelectedIndex="{Binding N}"   />
+                    <!--</StackPanel>-->
+                    </Grid>
                 </DataTemplate>
             </Setter.Value>
         </Setter>

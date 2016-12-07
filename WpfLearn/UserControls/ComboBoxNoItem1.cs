@@ -20,9 +20,9 @@ namespace WpfLearn.UserControls
     /// 
     /// 【2016.12.6】 希望不要出现bug，出现也搞不定了。。
     /// 配合Controls_Themes.xaml样式文件使用
-    /// 不知道为什么，想把LeftClickCommand改成ButtonClickCommand，可是就是不行。
-    /// 其实吧，左右两个按钮，都是调用了LeftClickCommand。
-    /// 唯一的判断就是在LeftClick函数，有判断按钮的name，来做不同的事情。
+    /// 不知道为什么，想把LeftClickCommand改名字成ButtonClickCommand，可是就是不行。
+    /// 其实左右两个按钮，都是调用了LeftClickCommand。
+    /// 唯一的判断就是在LeftClick函数，有判断按钮的name值，来做不同的事情。
     /// </summary>
     public class ComboBoxNoItem1 : ComboBox
     {
@@ -38,9 +38,9 @@ namespace WpfLearn.UserControls
         }
         #endregion
 
-        #region 左边按钮
+        #region 按钮
         /// <summary>
-        /// 左边按钮，附加属性，不太懂。。
+        /// 按钮是否可用，附加属性
         /// </summary>
         public static readonly DependencyProperty IsLeftEnabledProperty = DependencyProperty.RegisterAttached("IsLeftEnabled"
             , typeof(bool), typeof(ComboBoxNoItem1), new FrameworkPropertyMetadata(false, IsLeftEnabledChanged));
@@ -63,7 +63,7 @@ namespace WpfLearn.UserControls
         }
        
         
-        // get.set 但是从来就没用过
+        // get.set 但是从来就没用过，没有不行
         [AttachedPropertyBrowsableForType(typeof(ComboBoxNoItem1))]
         public static bool GetIsLeftEnabled(DependencyObject d)
         {
@@ -75,10 +75,10 @@ namespace WpfLearn.UserControls
             obj.SetValue(IsLeftEnabledProperty, value);
         }
 
-        // 左边点击命令
+        // 点击命令
         public static RoutedUICommand LeftClickCommand { get; private set; }
         /// <summary>
-        /// 绑定事件
+        /// 绑定命令
         /// </summary>
         private static readonly CommandBinding LeftClickCommandBinding;
 
@@ -130,9 +130,6 @@ namespace WpfLearn.UserControls
         }
 
         #endregion
-
-       
-
 
     }
 }

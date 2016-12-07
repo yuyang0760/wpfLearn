@@ -3,6 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WpfLearn.UserControls">
 
+    <!--ImageButton4的样式 和  ComboBoxNoItem1Style样式
+        配合UserControls下相应文件一起使用
+        放一起因为ComboBoxNoItem1Style 用到了 ImageButton4
+        分开引用的方法好像不行，暂时搞不懂。。
+    -->
     <!-- comboBox的背景 -->
     <ImageBrush x:Key="ComboBoxNoItemBackground" ImageSource="pack://application:,,,/资源/ComboBox背景.png" />
     <ImageBrush x:Key="ComboBoxNoItemBackground_hui" ImageSource="pack://application:,,,/资源/ComboBox背景灰.png" />
@@ -56,7 +61,7 @@
                     <Grid Margin="0" x:Name="grid1" Background="{DynamicResource ComboBoxNoItemBackground}">
                         <!--里面的一个Border，当鼠标移上去时，显示的框-->
                         <Border x:Name="border"  BorderBrush="{x:Null}" BorderThickness="2" Height="Auto" Margin="2" VerticalAlignment="Stretch" Width="Auto" >
-                            <!--Grid 分成 3部分 两个图片按钮，一个TextBlock ,背景和grid1的背景一样 -->
+                            <!--Grid 分成 3部分 两个图片按钮，一个TextBlock 。背景和grid1的背景一样 -->
                             <Grid Margin="0,0,0,0" Background="{Binding ElementName=grid1,Path=Background}">
                                 <Grid.ColumnDefinitions>
                                     <!--标记：分的比例，比例可能还会改-->
@@ -64,7 +69,7 @@
                                     <ColumnDefinition Width="6*"/>
                                     <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
-                                <!--标记： 元素3个     -->
+                                <!--标记： 元素3个   包含2个imageButton4  -->
 
                                 <TextBlock x:Name="textBlock" Grid.Column="1" TextWrapping="Wrap" Text="{TemplateBinding Text }" TextAlignment="Center" VerticalAlignment="Center"/>
 
