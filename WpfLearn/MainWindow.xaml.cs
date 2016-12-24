@@ -26,49 +26,44 @@ namespace WpfLearn
             InitializeComponent();
 
         }
-       
-        /// <summary>
-        ///  测试按钮 2016.12.7
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button_Click(object sender, RoutedEventArgs e)
+
+        
+        // 显示按钮
+        private void bt_show_Click(object sender, RoutedEventArgs e)
         {
 
-            // 【普通添加图片】
-            image.Source = new BitmapImage(new Uri("资源/世界资源/怪物/8_001_003.png", UriKind.Relative));
+            ModDownload modDownload = new ModDownload();
 
-            // 【给ComboBoxNoItem1】赋值
-            comboBoxNoItem1.Items.Add("11111");
-            comboBoxNoItem1.Items.Add("22222");
-            comboBoxNoItem1.Items.Add("33333");
-            comboBoxNoItem1.Items.Add("44444");
-            comboBoxNoItem1.SelectedIndex = 0;
-
-            // 【给ComboBoxNoItem2】赋值
-            comboBoxNoItem2.ItemsSource = new List<int>(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
-            comboBoxNoItem2.SelectedIndex = 5;
-
-            // 【给textbox赋值】
-            textBox.Text = "hi";
-
-            // 【listbox添加数据】
-            List<Student> studentList = new List<Student>();
-
-            string s = @"C:\Users\yy\Documents\Visual Studio 2015\Projects\WpfLearn\WpfLearn\资源\世界资源\怪物\8_001_003.png";
-            if (!File.Exists(s)) { MessageBox.Show("图片文件不存在");return; }
-
-            List<string> ll = new List<string>();
-            for (int i = 0; i < 100; i++)
+            // 显示
+            string modre = modDownload.show(tb_modID.Text);
+            if (modre == "true")
             {
-               
-                ll.Add(i.ToString());
-                studentList.Add(new Student("小明1", s,ll, i));
-            }    
-            listBox.ItemsSource = studentList;
-
-
-
+                string title = modDownload.modShow.Title;
+                string describe = modDownload.modShow.Describe;
+               tb_descripbe.Text = title + "\r\n\r\n" + describe + "\r\n\r\n";
+            }
+            // 失败
+            else
+            {
+                MessageBox.Show(modre);
+            }
+        }
+        // 下载按钮
+        private void bt_down_Click(object sender, RoutedEventArgs e) 
+        {
+            ModDownload modDownload = new ModDownload();
+           string re= modDownload.down(tb_modID.Text, System.Environment.CurrentDirectory);
+            // 下载失败
+            if (re!="true")
+            {
+                MessageBox.Show(re);
+            }
+            // 下载成功
+            else
+            {
+                // 打开文件夹
+                System.Diagnostics.Process.Start("explorer.exe", System.Environment.CurrentDirectory);
+            }
         }
     }
 }

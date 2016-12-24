@@ -4,36 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLearn"
-    
-        xmlns:UserControls="clr-namespace:WpfLearn.UserControls" 
-    
+     
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" 
         x:Class="WpfLearn.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="451" Width="725" WindowStartupLocation="CenterScreen">
+        Title="Mod下载 by yy" Height="451" Width="725" WindowStartupLocation="CenterScreen">
 
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/Controls_Themes.xaml"/>
-                <ResourceDictionary Source="Themes/ListBoxWorld1.xaml"/>
-                <ResourceDictionary Source="Themes/TextBox1_Style.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
-
-
-
-    <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Width="717">
-        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem1" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Height="44" Width="200"/>
-        <Button x:Name="button" Content="测试按钮" HorizontalAlignment="Left" Margin="321,21,0,0" VerticalAlignment="Top" Width="84" Height="56" Click="button_Click"/>
-        <UserControls:ImageButton4 x:Name="imageButton4" Content="ImageButton4" HorizontalAlignment="Left" Margin="229,10,0,0" VerticalAlignment="Top" ImageMouseEnter="资源/垃圾桶_Enter.png" ImageMouseLeave="资源/垃圾桶_Leave.png" Height="80" Width="87"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="38" Margin="24,104,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" FontSize="20"/>
-        <ListBox x:Name="listBox" Height="229" Margin="10,162,10,0" VerticalAlignment="Top" Style="{DynamicResource ListBoxWorld1}"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="58" Margin="410,19,0,0" VerticalAlignment="Top" Width="86"/>
-        <UserControls:ComboBoxNoItem1 x:Name="comboBoxNoItem2" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Height="40" Width="200"/>
-        
-
+    <Grid >
+        <Button x:Name="bt_show" Content="显示" HorizontalAlignment="Left" Margin="229,11,0,0" VerticalAlignment="Top" Width="110" Height="50" Click="bt_show_Click"/>
+        <TextBlock Text="ModID:" HorizontalAlignment="Left" Margin="18,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_modID"    HorizontalAlignment="Left" Height="23" Margin="74,25,0,0" TextWrapping="Wrap" Text="343753877" VerticalAlignment="Top" Width="140"/>
+        <Button x:Name="bt_down" Content="下载" HorizontalAlignment="Left" Margin="344,11,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="bt_down_Click"/>
+        <TextBox x:Name="tb_descripbe" Height="325" Margin="10,76,10,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
     </Grid>
 
 
